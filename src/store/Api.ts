@@ -6,7 +6,6 @@ export class ApiService {
   constructor(baseURL: string) {
     this.axiosInstance = axios.create({
       baseURL,
-      timeout: 1000,
     });
   }
 
