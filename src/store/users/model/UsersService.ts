@@ -1,7 +1,6 @@
-// import { UsersResponseModel } from '../UsersResponseModel';
 import { ApiService } from '../../Api';
-import { RequestResponse } from '../../../models/store/Response';
-import { UserModel } from '../../../models/user/UserModel';
+import { RequestResponse } from '../../../common/models/store/Response';
+import { UserModel } from '../../../common/models/user/UserModel';
 
 export interface UsersService {
   readUsersList: (data: {

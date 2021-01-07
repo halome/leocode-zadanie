@@ -1,8 +1,8 @@
 import { parseArray } from 'sparkson';
 // import { UsersResponseModel } from './UsersResponseModel';
 import { UsersService } from './model/UsersService';
-import { UserModel } from '../../models/user/UserModel';
-import { ResponseType } from '../../models/store/Response';
+import { UserModel } from '../../common/models/user/UserModel';
+import { ResponseType } from '../../common/models/store/Response';
 
 export const usersService: UsersService = {
   readUsersList: async ({ apiService }) => {

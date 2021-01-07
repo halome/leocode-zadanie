@@ -1,7 +1,7 @@
 import { action, computed, thunk } from 'easy-peasy';
-import { UsersStore } from '../../models/store/UsersStore';
+import { UsersStore } from './model/UsersStore';
 import { usersService } from './usersService';
-import { ResponseType } from '../../models/store/Response';
+import { ResponseType } from '../../common/models/store/Response';
 
 export const usersStore: UsersStore = {
   users: [],

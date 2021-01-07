@@ -15,7 +15,7 @@ export const SearchInput: React.FC<Props> = memo(
     const throttled = useRef(
       _throttle((value) => {
         onValueChange?.(value);
-      }, 500),
+      }, throttle),
     );
 
     useEffect(() => throttled.current(currentValue), [currentValue]);
@@ -28,7 +28,7 @@ export const SearchInput: React.FC<Props> = memo(
       <S.Container>
         <S.StyledInput
           value={currentValue}
-          placeholder={'Search by'}
+          placeholder={'Search by anything'}
           disabled={disabled}
           onChange={onChange}
         />

@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react';
 import * as S from './style/UsersView.style';
-import { SearchInput } from '../../components/searchInput/SearchInput';
-import { User } from '../../components/user/User';
+import { SearchInput } from '../../common/components/searchInput/SearchInput';
+import { User } from '../../common/components/user/User';
 import { useStoreActions, useStoreState } from '../../store/store';
-// @ts-ignore
-import Loader from 'react-loader-spinner';
 
 interface Props {}
 
@@ -22,7 +20,7 @@ export const UsersView: React.FC<Props> = () => {
       <SearchInput disabled={isFetching} onValueChange={searchUsers}/>
       <S.ListContainer>
         {isFetching ? (
-          <Loader type='Puff' color='#00BFFF' height={100} width={100} />
+          <S.PuffLoader />
         ) : (
           filteredUsers.map((user) => (
             <User
